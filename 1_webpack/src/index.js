@@ -1,14 +1,18 @@
-import {Sum} from "./calc";
-import "./index.css"
+import "./index.js";
 
-console.log(Sum(50,69));
+let form = document.querySelector("form");
+form.setAttribute("class", "taskForm");
+document.querySelector("#submit").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let task = document.getElementById("task").value;
+  append(task);
+});
 
-
-
-const root = document.getElementById("root");
-
-const h1 = document.createElement("h1");
-h1.innerText = "HELLO WORLD";
-
-h1.setAttribute("class","redtext")
-root.appendChild(h1);
+function append(task, id) {
+  let row = document.createElement("tr");
+  row.setAttribute("class", "row");
+  let td1 = document.createElement("td");
+  td1.textContent = task;
+  row.append(td1);
+  document.querySelector("tbody").append(row);
+}
