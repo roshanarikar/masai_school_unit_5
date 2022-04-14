@@ -4,23 +4,22 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const MobileOS = ["Android","Blackberry","iPhone","Windows Phone"]
+  const MobileM = ["Samsung","HTC","Micromax","Apple"]
   return (
     <div className="App">
     <h3>Mobile Operating System</h3>
     <ul>
-    <li>Android</li>
-    <li>Blackberry</li>
-    <li>iPhone</li>
-    <li>Windows Phone</li>
+    {MobileOS.map((e)=>{
+      return <li>{e}</li>
+    })}
     </ul>
     <br />
     <h3>Mobile Manufacturees</h3>
     <ul>
-    <li>Samsung</li>
-    <li>HTC</li>
-    <li>Micromax</li>
-    <li type="circle">Apple</li>
+    {MobileM.map((e)=>{
+      return <li>{e}</li>
+    })}
     </ul>
     </div>
   )
