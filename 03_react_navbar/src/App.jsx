@@ -4,14 +4,16 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const middleNav = ["Services","Project","About"]
   return (
     <div className="App">
       <nav id='navbar'>
         <h3>LOGOBAKERY</h3>
-        <div id='service'><p>Services</p>
-        <p>Project</p>
-        <p>About</p></div>
+        <div id='service'>
+          {middleNav.map((e)=>{
+            return <p>{e}</p>
+          })}
+        </div>
         <button>Contact</button>
       </nav>
     </div>
