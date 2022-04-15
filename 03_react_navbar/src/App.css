@@ -38,5 +38,29 @@
 }
 
 button {
-  font-size: calc(10px + 2vmin);
+  border-radius: 15px;
+  background: rgb(3,138,165);
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  margin: 15px 100px 8px 50px;
+  color: white;
+  border: none;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  color: white;
+ 
+}
+h3{
+  margin-left: 100px;
+}
+#service{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  color: rgb(198, 193, 193);
 }
