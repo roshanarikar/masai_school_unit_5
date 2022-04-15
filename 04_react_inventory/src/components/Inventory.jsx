@@ -20,9 +20,15 @@ export const Inventory = () => {
       }}
     >
       <div className="items">
-        <span>Books: </span>
-        <button className="circlularButton">+</button>
-        <button className="circlularButton">-</button>
+        <span>Books:{inv}</span>
+        <button className="circlularButton"
+                  onClick={() =>{
+                    setInv(inv+1)
+                  }} >+</button>
+        <button className="circlularButton"
+                  onClick={() =>{
+                    setInv(inv-1)
+                  }}>-</button>
         <span>{inv.books}</span>
       </div>
       <div className="items">
