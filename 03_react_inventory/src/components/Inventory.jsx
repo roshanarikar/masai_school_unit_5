@@ -5,9 +5,71 @@ export const Inventory = () => {
     books: 10,
     notebooks: 13,
     pens: 40,
+    inkpens : 11,
   });
     // Create add and remove functions here that changes the
     // state.
+
+     //Books
+     const addBooks = ()=>{
+       setInv(preState=>{
+         return {...preState,books:inv.books++}
+       })
+     }
+
+     const removeBooks =()=>{
+       if(inv.books <=0){
+         return
+       }
+       setInv(preState=>{
+         return {...preState,books:inv.books++}
+       })
+     }
+    //NoteBooks
+    const addNotebooks = ()=>{
+      setInv(preState=>{
+        return {...preState,notebooks:inv.notebooks++}
+      })
+    }
+
+    const removeNotebooks =()=>{
+      if(inv.notebooks <=0){
+        return
+      }
+      setInv(preState=>{
+        return {...preState,notebooks:inv.notebooks++}
+      })
+    }
+    //Pen
+    const addPens = ()=>{
+      setInv(preState=>{
+        return {...preState,pens:inv.pens++}
+      })
+    }
+
+    const removePens =()=>{
+      if(inv.pens <=0){
+        return
+      }
+      setInv(preState=>{
+        return {...preState,pens:inv.pens++}
+      })
+    }
+    //InkPen
+    const addInkpen = ()=>{
+      setInv(preState=>{
+        return {...preState,inkpens:inv.inkpens++}
+      })
+    }
+
+    const removeInkpen =()=>{
+      if(inv.inkpens <=0){
+        return
+      }
+      setInv(preState => {
+        return {...preState,inkpens:inv.inkpens++}
+      })
+    }
   return (
     <div
       style={{
@@ -20,37 +82,31 @@ export const Inventory = () => {
       }}
     >
       <div className="items">
-        <span>Books:{inv}</span>
-        <button className="circlularButton"
-                  onClick={() =>{
-                    setInv(inv+1)
-                  }} >+</button>
-        <button className="circlularButton"
-                  onClick={() =>{
-                    setInv(inv-1)
-                  }}>-</button>
+        <span>Books:</span>
+        <button onClick={addBooks} className="circlularButton">+</button>
+        <button onClick={removeBooks} className="circlularButton">-</button>
         <span>{inv.books}</span>
       </div>
       <div className="items">
         <span>Notebooks: </span>
-        <button className="circlularButton">+</button>
-        <button className="circlularButton">-</button>
+        <button onClick={addNotebooks} className="circlularButton">+</button>
+        <button onClick={removeNotebooks} className="circlularButton">-</button>
         <span>{inv.notebooks}</span>
       </div>
       <div className="items">
         <span>Pen: </span>
-        <button className="circlularButton">+</button>
-        <button className="circlularButton">-</button>
+        <button onClick={addPens} className="circlularButton">+</button>
+        <button onClick={removePens} className="circlularButton">-</button>
         <span>{inv.pens}</span>
       </div>
       <div className="items">
         <span>Ink Pens: </span>
-        <button className="circlularButton">+</button>
-        <button className="circlularButton">-</button>
+        <button onClick={addInkpen} className="circlularButton">+</button>
+        <button onClick={removeInkpen} className="circlularButton">-</button>
         <span>{inv.inkpens}</span>
       </div>
-            {/*calculate total and show it*/}
-      total: {0}
+            
+      total: {inv.books+inv.pens+inv.notebooks+inv.inkpens}
     </div>
   );
 };
