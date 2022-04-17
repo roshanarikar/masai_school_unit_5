@@ -15,7 +15,7 @@ function Todo(){
         setTodosList([...todosList,payload])
     }
     const handleStatus = (id) =>{
-        console.log("id",id);
+        
         setTodosList(
             todosList.map((e)=> (e.id === id ? { ...e,status: !e.status}:e))        )
     };
