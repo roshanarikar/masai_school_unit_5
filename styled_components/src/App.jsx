@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Button from "./components/button"
+import {Button} from "./components/Button";
+import { Button } from "antd";
+import { Button } from "@ant-design/icons"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <h2>Count : 0</h2>
-      <Button/>
-    </div>
+      <Button type='primary'>Primary Button</Button>
+      <Button>Default Button</Button>
+      <Button type="dashed">Dashed Button</Button>
+      <br />
+      <Button type="text">Text Button</Button>
+      <Button type="link">Link Button</Button>
+      </div>
   )
 }
 
