@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import { Forms } from "./components/form"
+import { Forms } from "./components/Form"
 
 function App() {
  
