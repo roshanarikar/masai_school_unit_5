@@ -1,0 +1,24 @@
+{
+  "restaurant": [
+    {
+      "name": "Soumya Ranjan Kalia",
+      "accepts_card": "true",
+      "votes": "5",
+      "reviews": "10",
+      "cost": "500",
+      "ratings": "5",
+      "image": "jgufytfyf",
+      "id": 1
+    },
+    {
+      "name": "Soumya Ranjan Kalia",
+      "accepts_card": "true",
+      "votes": "5",
+      "reviews": "10",
+      "cost": "500",
+      "ratings": "5",
+      "image": "jgufytfyf",
+      "id": 2
+    }
+  ]
+}
