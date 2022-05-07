@@ -1,3 +1,3 @@
 import { createStore } from "redux"
-import { todoReducer } from "./Todo/reducer"
-export const store = createStore(todoReducer)
+import { reducer } from "./reducer"
+export const store = createStore(reducer,{ count : 0, todo : []})
